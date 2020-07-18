@@ -1,0 +1,35 @@
+#contact {
+  background: $dark-background-color;
+  // background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  // -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+  // clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+  padding: 15rem 0 10rem 0;
+  margin: 0rem auto 10rem;
+  // margin-top: -15rem;
+  // margin-bottom: -1px;
+  color: $white-color;
+  align-items: center;
+  max-width: 70rem;
+  
+
+  @include respond(tab-land) {
+    padding: 10rem 0;
+    clip-path: none;
+    margin-top: 0;
+    -webkit-clip-path: none;
+  }
+
+  .contact-wrapper {
+    margin-top: 3.2rem;
+    padding: 0 2rem;
+    backface-visibility: hidden;
+
+    &__text {
+      margin-bottom: 7rem;
+      color: $dark-foreground-color;
+      text-align: center;
+    }
+
+    
+  }
+}

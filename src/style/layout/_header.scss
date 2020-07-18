@@ -1,0 +1,175 @@
+.header-bar {
+  background-color: $dark-background-color;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0rem 5rem;
+  height: 10rem;
+  @include respond(tab-port) {display: block; padding: 0rem 1rem;}
+  @include respond(phone) {display: block; padding: 0rem 0.5rem;}
+  z-index: 4;
+  align-items: center;
+  transition: height ease-out 0.3s 0s, box-shadow ease-out 0.3s 0.1s;
+
+  .mobile-links
+  {
+    background-color: none;
+    display: flex;
+    //margin: auto auto;
+    align-items: center;
+    justify-content: center;
+    transition: opacity ease 0.2s;
+    visibility: hidden;
+    height: 0%;
+    opacity: 0%;
+    ol {
+      color: $primary-color;
+      font-family: 'Inconsolata', sans-serif;
+      font-size: 2rem;
+      list-style: decimal-leading-zero;
+      text-align: center;
+    }
+    li {
+      text-align: center;
+      margin: 0rem;
+    }
+    .nav-link {
+      text-align: center;
+      font-size: 2.2rem;
+      font-family: 'Inconsolata', sans-serif;
+      transition: color ease 0.3s;
+      color: $light-foreground-color;
+      cursor: pointer;
+      &:hover {transition: color ease 0.3s; color: $primary-color;}
+    }
+
+    
+  }
+  .link-open
+  {
+    visibility: visible !important;
+    transition: opacity ease 0.5s 0.4s;
+    opacity: 100%;
+    height: auto;
+  }
+
+  .header-nav 
+  {
+    padding: 0rem 2.5rem;
+    margin: 1.5rem auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $dark-background-color;
+    width: 100%;
+
+    .logo
+    {
+      cursor: pointer;
+      .mainLogo
+      {
+        margin-top: 0.3rem;
+        @include respond(tab-port)
+        {
+          margin-top:0rem;
+        }
+        @include respond(phone)
+        {
+          margin-top:0rem;
+        }
+        fill: $primary-color;
+        &-background
+        {
+          fill: rgba($primary-color, 0);
+          transition: fill ease 0.3s;
+        }
+        &:hover
+        {
+          .mainLogo-background {
+            transition: fill ease 0.3s;
+            fill: rgba($primary-color, 0.1);
+          }
+        }
+      }
+
+      .arrowIcon
+      {
+        fill: $primary-color;
+        transition: transform ease 0.3s;
+        &-background
+        {
+          fill: rgba($primary-color, 0);
+          transition: fill ease 0.3s;
+        }
+        &:hover
+        {
+          .mainLogo-background {
+            transition: fill ease 0.3s;
+            fill: rgba($primary-color, 0.1);
+          }
+        }
+      }
+    }
+
+    .links
+    {
+      display: flex;
+      float: right;
+      ol {
+        list-style-type: decimal-leading-zero;
+        font-family: 'Inconsolata', sans-serif;
+        margin: 0rem;
+        letter-spacing: 0.1rem;
+        padding: 0rem;
+        margin-right: 6rem;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        font-size: 1.4rem;
+      }
+      li {
+
+        font-family: 'Inconsolata', sans-serif;
+        font-size: 1.4rem;
+        line-height: 1.9;
+        margin: 0rem 0rem;
+        margin-left: 8rem;
+        padding: 0rem;
+        text-align: left;
+        color: $primary-color;
+      }
+      .nav-link {
+        font-family: 'Inconsolata', sans-serif ;
+        color: $light-foreground-color;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: 0.2rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        letter-spacing: 0.1rem;
+        transition: color ease 0.3s;
+        &-button
+        {
+          color: $primary-color;
+        }
+
+        &:hover{
+          color: $primary-color;
+          transition: color ease 0.3s;
+        }
+      }
+      margin: 0rem;
+      padding: 0rem;
+    }
+    
+  }
+}
+
+.open
+{
+  height: 25rem !important;
+  box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px !important;
+}
+

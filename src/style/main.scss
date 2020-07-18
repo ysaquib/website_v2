@@ -1,0 +1,37 @@
+@import './abstracts/mixins';
+@import './abstracts/variables';
+@import './abstracts/helpers';
+
+@import './base/base';
+@import './base/typography';
+
+@import './components/buttons';
+
+@import './layout/footer';
+@import './layout/header';
+@import './layout/sections';
+
+@import './sections/about';
+@import './sections/contact';
+@import './sections/hero';
+@import './sections/projects';
+@import './sections/moreProjects';
+
+@import './vendor/css/font-awesome.min.css';
+
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 0.2rem solid $background-color;
+  border-radius: 0.25em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $light-background-color;
+  border-radius: 0.25em;
+}
